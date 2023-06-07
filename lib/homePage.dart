@@ -9,16 +9,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final List<String> _categories = [
-    'Computer',
-    'Data Mining',
-    'Software Engineering',
-    'UI/UX',
-    'Security',
-    'Database',
-    'Web Development',
-    'Software Testing',
-  ];
+  // Syabila edit disini
+
+  // Clue list kategori
+
+  // End of edit
 
   int _isSelected = 0;
   @override
@@ -291,10 +286,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
     Widget categories(int index) {
       return InkWell(
-        onTap: () {
-          setState(() {
-            _isSelected = index;
-          });
+        // Syabila edit disini
+
+        // Clue on tap state
+
+        // End of edit
         },
         child: Container(
           margin: EdgeInsets.only(top: 30, right: 12),
@@ -337,10 +333,11 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             InkWell(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ReadPage()),
-                );
+                // Syabila edit disini
+
+                // Clue Routing to Readpage
+
+                // End of edit
               },
               child: Container(
                 height: 170,
@@ -388,11 +385,11 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                header(),
+                // Syabila call header,
                 SizedBox(
                   height: 30,
                 ),
-                searchField(),
+                // Syabila call search field,
                 SizedBox(
                   height: 30,
                 ),
@@ -406,7 +403,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
-                service(),
+                // Syabila call service,
               ],
             ),
           ),
