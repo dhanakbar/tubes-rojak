@@ -21,21 +21,20 @@ class _ReadPageState extends State<ReadPage> {
   late String citationText = "";
 
   Future<void> fetchData() async {
-    late DatabaseReference _dbBook = FirebaseDatabase.instance
-        .reference()
-        .child('reference')
-        .child('books')
-        .child('book1');
-    DataSnapshot snapshot = (await _dbBook.once()).snapshot;
-    Map<dynamic, dynamic>? data = snapshot.value as Map<dynamic, dynamic>?;
+    late DatabaseReference _dbBook = 
+    // Ismi edit disini
+
+    // Clue initial variable
+
+    // End of edit
 
     if (data != null) {
       setState(() {
-        title = data['title'] ?? '';
-        author = data['author'] ?? '';
-        description = data['description'] ?? '';
-        year = data['year'] ?? '';
-        publisher = data['publisher'] ?? '';
+        // Ismi edit disini
+
+        // Clue setting state
+
+        // End of edit
       });
     }
   }
@@ -59,16 +58,11 @@ class _ReadPageState extends State<ReadPage> {
                       value: 'APA',
                       onChanged: (String? value) {
                         setState(() {
-                          if (value == 'APA') {
-                            citationText =
-                                "$author, $title, $publisher, $year.";
-                          } else if (value == 'HARVARD') {
-                            citationText =
-                                "$author. $year, $title, $publisher.";
-                          } else if (value == 'IEEE') {
-                            citationText =
-                                "$author, $title, $publisher, $year.";
-                          }
+                          // Ismi edit disini
+
+                          // Clue state berdasarkan citation
+
+                          // End of edit
                         });
                       },
                       items: <String>['APA', 'HARVARD', 'IEEE']
