@@ -51,11 +51,11 @@ class _ReferenceUploadPageState extends State<ReferenceUploadPage> {
                   ],
                 ),
               ),
-              _buildTextField('Title', _titleController),
-              _buildTextField('Author', _authorController),
-              _buildTextField('Date (dd/mm/yyyy)', _dateController),
-              _buildCategoryDropdown(),
-              _buildTextField('Description', _descriptionController),
+              // Razqy edit disini
+
+              // Clue : form upload
+
+              // End of edit
               SizedBox(height: 20),
               _buildFilePicker(),
               SizedBox(height: 20),
@@ -147,14 +147,11 @@ class _ReferenceUploadPageState extends State<ReferenceUploadPage> {
                 SizedBox(width: 10),
                 ElevatedButton(
                   onPressed: () async {
-                    FilePickerResult? result =
-                        await FilePicker.platform.pickFiles();
-                    if (result != null) {
-                      selectedFilePath = result.files.single.path;
-                      setState(() {
-                        _selectedFile = File(selectedFilePath!);
-                      });
-                    }
+                    // Razqy edit disini
+
+                    // Clue: file picker
+
+                    // End of edit
                   },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all<Color>(
