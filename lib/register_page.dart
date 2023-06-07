@@ -20,12 +20,11 @@ class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController _controllerPassword = TextEditingController();
 
   Future<void> createUserWithEmailAndPassword() async {
-    try {
-      await Auth().createUserWithEmailAndPassword(
-        email: _controllerEmail.text,
-        password: _controllerPassword.text,
-      );
-    } on FirebaseAuthException catch (e) {}
+    // Kevin edit disini
+
+    // Clue signup
+
+    // End of edit
   }
 
   List<Map> dataUser = [];
@@ -204,11 +203,11 @@ class _RegisterPageState extends State<RegisterPage> {
                             SizedBox(height: 16),
                             ElevatedButton(
                               onPressed: () {
-                                createUserWithEmailAndPassword();
-                                if (_formKey.currentState!.validate()) {
-                                  register(_fullName, _email, _phoneNumber,
-                                      _password, dataUser);
-                                }
+                                // Kevin edit disini
+
+                                // Clue create user
+
+                                // End of edit
                               },
                               style: ButtonStyle(
                                 backgroundColor:
@@ -265,11 +264,10 @@ class _RegisterPageState extends State<RegisterPage> {
 
 void register(String fullName, String email, String phoneNumber,
     String password, List dataUser) {
-  dataUser.add({
-    'fullname': '$fullName',
-    'email': '$email',
-    'phonenumber': '$phoneNumber',
-    'password': '$password'
-  });
+  // Kevin edit disini
+
+  // Clue maping user
+
+  // End of edit
   print(dataUser);
 }
