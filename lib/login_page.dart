@@ -14,19 +14,11 @@ class _LoginPageState extends State<LoginPage> {
   String _email = '';
   String _password = '';
 
-  final TextEditingController _controllerEmail = TextEditingController();
-  final TextEditingController _controllerPassword = TextEditingController();
+  // Zacharia edit disini
 
-  Future<bool> signInWithEmailAndPassword() async {
-    try {
-      return await Auth().signInWithEmailAndPassword(
-        email: _controllerEmail.text,
-        password: _controllerPassword.text,
-      );
-    } on FirebaseAuthException catch (e) {}
+  // Clue signin with email password
 
-    return true;
-  }
+  // End of edit
 
   @override
   Widget build(BuildContext context) {
@@ -149,14 +141,11 @@ class _LoginPageState extends State<LoginPage> {
                           SizedBox(height: 30),
                           ElevatedButton(
                             onPressed: () async {
-                              if (await signInWithEmailAndPassword()) {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          ReferenceUploadPage()),
-                                );
-                              }
+                              // Zacharia edit disini
+
+                              // Clue signin with email password
+
+                              // End of edit
                             },
                             style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all<Color>(
